@@ -1,0 +1,104 @@
+* Sun Oct 28 2012 Islam Amer <islam.amer@jollamobile.com> - 1.0.26
+- Updated to 1.0.26
+- Removed redundant or hardware specific plugins
+- Fixes MER#627
+
+* Fri Sep 2 2011 Jouni Peltonen <jouni.peltonen@cybercom.com> - 1.0.24
+- Update to 1.0.24
+
+* Mon Jul 26 2010 Ling Yue <ling.yue@intel.com> - 1.0.23
+- Upgrade to 1.0.23
+- Use spectacle
+
+* Fri Dec 25 2009 Bin Gao <bin.gao@intel.com> 1.0.22
+- Update to 1.0.22
+
+* Mon Sep 21 2009 Vivian Zhang <vivian.zhang@intel.com> 1.0.21
+- Update to 1.0.21
+
+* Wed May 20 2009 Vivian Zhang <vivian.zhang@intel.com> 1.0.20
+- Update to 1.0.20
+
+* Tue Feb 17 2009 Anas Nashif <anas.nashif@intel.com> 1.0.19
+- Update to 1.0.19
+
+* Mon Jan 12 2009 Anas Nashif <anas.nashif@intel.com> 1.0.18
+- Update to 1.0.18
+
+* Sat Jan 03 2009 Rusty Lynch <rusty.lynch@intel.com> 1.0.18
+- Changing the BuildRequires for PulseAudio to use the pkgname
+
+* Wed Dec 31 2008 Anas Nashif <anas.nashif@intel.com> 1.0.18
+- Disable jack and oss plugins
+
+* Thu Sep 11 2008 Jaroslav Kysela <jkysela@redhat.com> - 1.0.18-1.rc3
+- Updated to 1.0.18rc3
+- Added usbstream subpackage
+
+* Mon Jul 21 2008 Jaroslav Kysela <jkysela@redhat.com> - 1.0.17-1
+- Updated to 1.0.17
+
+* Tue Mar 25 2008 Lubomir Kundrak <lkundrak@redhat.com> - 1.0.16-4
+- Kind of fix the plugins not to complain about the hints
+
+* Wed Mar 19 2008 Eric Moret <eric.moret@gmail.com> - 1.0.16-3
+- Fixing jack.conf (#435343)
+
+* Sun Mar 09 2008 Lubomir Kundrak <lkundrak@redhat.com> - 1.0.16-2
+- Add descriptions to various PCM plugins, so they're visible in aplay -L
+
+* Sat Mar 08 2008 Lubomir Kundrak <lkundrak@redhat.com> - 1.0.16-1
+- New upstream, dropping upstreamed patches
+- Do not assert fail when pulseaudio is unavailable (#435148)
+
+* Tue Mar 04 2008 Lubomir Kundrak <lkundrak@redhat.com> - 1.0.15-4
+- Be more heplful when there's PulseAudio trouble.
+- This may save us some bogus bug reports
+
+* Mon Feb 18 2008 Fedora Release Engineering <rel-eng@fedoraproject.org> - 1.0.15-3
+- Autorebuild for GCC 4.3
+
+* Fri Jan 18 2008 Eric Moret <eric.moret@epita.fr> - 1.0.15-2
+- Update to upstream 1.0.15 (#429249)
+- Add "Requires: pulseaudio" to alsa-plugins-pulseaudio (#368891)
+- Fix pulse_hw_params() when state is SND_PCM_STATE_PREPARED (#428030)
+- run /sbin/ldconfig on post and postun macros
+
+* Thu Oct 18 2007 Lennart Poettering <lpoetter@redhat.com> - 1.0.14-6
+- Merge the whole /etc/alsa/pcm/pulseaudio.conf stuff into
+  /etc/alsa/pulse-default.conf, because the former is practically
+  always ignored, since it is not referenced for inclusion by any other
+  configuration file fragment (#251943)
+  The other fragments installed in /etc/alsa/pcm/ are useless, too. But
+  since we are in a freeze and they are not that important, I am not fixing
+  this now.
+
+* Wed Oct 17 2007 Lennart Poettering <lpoetter@redhat.com> - 1.0.14-5
+- Split pulse.conf into two, so that we can load one part from
+  form /etc/alsa/alsa.conf. (#251943)
+
+* Mon Oct 1 2007 Lennart Poettering <lpoetter@redhat.com> - 1.0.14-4
+- In the pulse plugin: reflect the XRUN state back to the application.
+  Makes XMMS work on top of the alsa plugin. (#307341)
+
+* Mon Sep 24 2007 Lennart Poettering <lpoetter@redhat.com> - 1.0.14-3
+- Change PulseAudio buffering defaults to more sane values
+
+* Tue Aug 14 2007 Eric Moret <eric.moret@epita.fr> - 1.0.14-2
+- Adding pulse as ALSA "default" pcm and ctl when the alsa-plugins-pulseaudio
+package is installed, fixing #251943.
+
+* Mon Jul 23 2007 Eric Moret <eric.moret@epita.fr> - 1.0.14-1
+- update to upstream 1.0.14
+- use configure --without-speex instead of patches to remove a52
+
+* Tue Mar 13 2007 Matej Cepl <mcepl@redhat.com> - 1.0.14-0.3.rc2
+- Really remove a52 plugin package (including changes in
+  configure and configure.in)
+
+* Thu Feb 15 2007 Eric Moret <eric.moret@epita.fr> 1.0.14-0.2.rc2
+- Adding configuration files
+- Removing a52 plugin package
+
+* Wed Jan 10 2007 Eric Moret <eric.moret@epita.fr> 1.0.14-0.1.rc2
+- Initial package for Fedora
