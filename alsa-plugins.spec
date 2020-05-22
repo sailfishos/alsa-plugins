@@ -45,6 +45,8 @@ make %{?jobs:-j%jobs}
 rm -rf %{buildroot}
 %make_install
 
+find  %{buildroot}
+
 for i in ctl_arcam_av ctl_oss pcm_oss pcm_usb_stream pcm_vdownmix pcm_upmix; do
 rm ${RPM_BUILD_ROOT}%{_libdir}/alsa-lib/libasound_module_${i}.so
 done
