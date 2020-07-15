@@ -1,0 +1,3 @@
+[submodule "alsa-plugins"]
+	path = alsa-plugins
+	url = https://git.sailfishos.org/mirror/alsa-plugins.git
