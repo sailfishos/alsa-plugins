@@ -1,6 +1,6 @@
 Name:       alsa-plugins
 Summary:    The Advanced Linux Sound Architecture (ALSA) Plugins
-Version:    1.2.2
+Version:    1.2.7.1
 Release:    1
 License:    GPLv2+ and LGPLv2+
 URL:        http://www.alsa-project.org/
