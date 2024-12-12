@@ -1,6 +1,6 @@
 Name:       alsa-plugins
 Summary:    The Advanced Linux Sound Architecture (ALSA) Plugins
-Version:    1.2.7.1
+Version:    1.2.12
 Release:    1
 License:    GPLv2+ and LGPLv2+
 URL:        http://www.alsa-project.org/
@@ -55,14 +55,11 @@ mv %{buildroot}%{_sysconfdir}/alsa/conf.d/99-pulseaudio-default.conf.example \
 %{buildroot}%{_sysconfdir}/alsa/conf.d/99-pulseaudio-default.conf
 
 
-%post
-/sbin/ldconfig
+%post -p /sbin/ldconfig
 
-%postun
-/sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files pulseaudio
-%defattr(-,root,root,-)
 %doc COPYING COPYING.GPL doc/README-pulse
 %{_libdir}/alsa-lib/libasound_module_pcm_pulse.so
 %{_libdir}/alsa-lib/libasound_module_ctl_pulse.so
