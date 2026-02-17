@@ -3,7 +3,7 @@ Summary:    The Advanced Linux Sound Architecture (ALSA) Plugins
 Version:    1.2.12
 Release:    1
 License:    GPLv2+ and LGPLv2+
-URL:        http://www.alsa-project.org/
+URL:        https://github.com/sailfishos/alsa-plugins
 Source0:    %{name}-%{version}.tar.gz
 BuildRequires:  autoconf
 BuildRequires:  automake
@@ -51,6 +51,11 @@ rm %{buildroot}%{_datadir}/alsa/alsa.conf.d/50-oss.conf
 rm %{buildroot}%{_datadir}/alsa/alsa.conf.d/60-upmix.conf
 rm %{buildroot}%{_datadir}/alsa/alsa.conf.d/60-vdownmix.conf
 rm %{buildroot}%{_datadir}/alsa/alsa.conf.d/98-usb-stream.conf
+rm %{buildroot}%{_sysconfdir}/alsa/conf.d/50-arcam-av-ctl.conf
+rm %{buildroot}%{_sysconfdir}/alsa/conf.d/50-oss.conf
+rm %{buildroot}%{_sysconfdir}/alsa/conf.d/60-upmix.conf
+rm %{buildroot}%{_sysconfdir}/alsa/conf.d/60-vdownmix.conf
+rm %{buildroot}%{_sysconfdir}/alsa/conf.d/98-usb-stream.conf
 mv %{buildroot}%{_sysconfdir}/alsa/conf.d/99-pulseaudio-default.conf.example \
 %{buildroot}%{_sysconfdir}/alsa/conf.d/99-pulseaudio-default.conf
 
